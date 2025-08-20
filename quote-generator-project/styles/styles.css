@@ -1,0 +1,96 @@
+:root {
+  --color: #333;
+}
+.dark-theme {
+  --color: #f7f7f7;
+}
+html {
+  font-style: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  color: var(--color);
+  justify-content: center;
+}
+body, section, .quote-ctt, .quote-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section {
+  background-color: lightblue;
+  width: 80%;
+  height: 80%;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  gap: 5%;
+}
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.hz-nav {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+}
+.vt-nav {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .hz-nav {
+    display: flex;
+  }
+}
+
+
+main {
+  margin-top: 20px;
+}
+
+
+.author-ctn {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.author-pic {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.author-dtl {
+  flex: 1;
+}
+.author-dtl span {
+  display: block;
+  height: 30px;
+  overflow: hidden;
+}
+.quote {
+  text-align: center;
+}

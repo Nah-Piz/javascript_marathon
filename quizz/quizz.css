@@ -1,0 +1,125 @@
+body {
+  height: 100vh;
+  background-color: #00003b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 70%;
+  min-height: 50%;
+  padding: 15px;
+  position: relative;
+}
+
+.submit {
+  background-color: rebeccapurple;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  color: white;
+  padding: 10px;
+}
+
+.qtn {
+  margin-bottom: 5px;
+}
+.qtn-ctn {
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
+}
+.instruction {
+  color: lightslategray;
+}
+.ans-ctn {
+  padding: 10px 20px;
+}
+
+.result {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+h2 {
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+.pass {
+  color: rgb(6, 230, 6);
+}
+.fail {
+  color: red;
+}
+.statement {
+  margin-bottom: 0;
+  color: rgb(6, 230, 6);
+}
+.final {
+  margin-bottom: 0;
+  color: orange;
+}
+.btn {
+  margin-top: 20px;
+  background-color: rebeccapurple;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.qtn-numb {
+  position: absolute;
+  left: 40%;
+  top: 8%;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rebeccapurple;
+}
+.activity {
+  height: 100%;
+}
+.loading {
+  display: none;
+}
+.load {
+  text-align: center;
+  display: block;
+  font-size: 18px;
+}
+.loader {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  border: 5px solid #999;
+  border-top: 5px solid dodgerblue;
+  transition: all 2s ease;
+  animation: spin-loader 1s linear infinite;
+}
+.warning {
+  display: none;
+  text-align: center;
+  color: orange;
+}
+.warning span {
+  color: red;
+}
+@keyframes spin-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

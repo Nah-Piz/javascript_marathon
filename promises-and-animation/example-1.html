@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+      backdrop-filter: blur(10px);
+      color: #1f1f1f;
+    }
+    .container {
+      width: 90px;
+      margin: 0px auto;
+    }
+    .root {
+      width: 100%;
+      padding: 10px;
+      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .card-container {
+      background: rgba(0,0,0,0.05);
+      padding: 10px;
+      position: relative;
+    }
+    .like-span {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      background-color: bisque;
+      color: #fda085;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    .card-image {
+      width: 128px;
+      height: 128px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+    .card-name {
+      text-align: center;
+      color: dimgrey;
+    }
+    .like-btn {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 8px;
+      color: #f5f5f5;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    }
+    .like-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    }
+    .orbit-ctn {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .orbit {
+      height: 50px;
+      display: flex;
+      gap: 5px;
+    }
+    .orbit0 {
+      width: 10px;
+      animation: scale-up0 1.5s linear infinite;
+      height: 100%;
+      background-color: black;
+    }
+    @keyframes scale-up1 {
+      0% { transform: scaleY(1); }
+      50% { transform: scaleY(0.8); }
+      100% { transform: scaleY(1.2); }
+    }
+    .orbit1 {
+      width: 10px;
+      animation: scale-up1 1.5s linear infinite;
+      height: 100%;
+      background-color: black;
+    }
+    @keyframes scale-up0 {
+      0% { transform: scaleY(0.8); }
+      50% { transform: scaleY(1); }
+      100% { transform: scaleY(1.2); }
+    }
+    .orbit2 {
+      width: 10px;
+      animation: scale-up2 1.5s linear infinite;
+      height: 100%;
+      background-color: black;
+    }
+    @keyframes scale-up2 {
+      0% { transform: scaleY(1.2); }
+      50% { transform: scaleY(1); }
+      100% { transform: scaleY(0.8); }
+    }
+    .orbit3 {
+      width: 10px;
+      animation: scale-up3 1.5s linear infinite;
+      height: 100%;
+      background-color: black;
+    }
+    @keyframes scale-up3 {
+      0% { transform: scaleY(1); }
+      50% { transform: scaleY(0.8); }
+      100% { transform: scaleY(1.2); }
+    }
+    .orbit4 {
+      width: 10px;
+      animation: scale-up4 1.5s linear infinite;
+      height: 100%;
+      background-color: black;
+    }
+    @keyframes scale-up4 {
+      0% { transform: scaleY(1.2); }
+      50% { transform: scaleY(1); }
+      100% { transform: scaleY(0.8); }
+    }
+  </style>
+</head>
+<body>
+  <div class="conatiner">
+    <div class="root" id="root"></div>
+  </div>
+
+  <div class="orbit-ctn">
+    <div class="orbit">
+      <div class="orbit0"></div>
+      <div class="orbit1"></div>
+      <div class="orbit2"></div>
+      <div class="orbit3"></div>
+      <div class="orbit4"></div>
+    </div>
+  </div>
+
+  <script src="eg-1.js"></script>
+</body>
+</html>

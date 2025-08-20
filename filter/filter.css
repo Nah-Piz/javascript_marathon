@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.products-container, .menu-container {
+  padding: 20px;
+}
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.product {
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  padding: 5px;
+  border-radius: 10px;
+  width: 150px;
+}
+.product p {
+  text-align: center;
+}
+.product-image {
+  width: 100%;
+  height: 150px;
+}
+.category {
+  cursor: pointer;
+}

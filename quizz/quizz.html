@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizz</title>
+  <link rel="stylesheet" href="quizz.css">
+</head>
+<body>
+  <div class="container">
+    <div class="loading">
+      <span class="loader"></span>
+      <span class="load">Loading...</span>
+    </div>
+    <div class="activity">
+      <span class="qtn-numb"></span>
+      <div class="qtn-ctn">
+        <h1 class="qtn">What is Your name?</h1>
+        <span class="instruction">(Select your name.)</span>
+      </div>
+      <div class="ans-ctn"></div>
+      <div class="warning"><span>Warning:</span> Cannot submit Unanswered quetion.</div>
+      <button class="submit">Submit</button>
+    </div>
+    <div class="result">
+      <h1 class="statement">Congratulations</h1>
+      <h3 class="final">Excellent performance</h3>
+      <h2 class="passed">You passed <span class="pass"></span></h2>
+      <h2 class="failed">And failed <span class="fail"></span> out of <span class="total"></span> qustions</h2>
+      <button class="btn">Take Another Quizz</button>
+    </div>
+  </div>
+  <script src="qtn.js"></script>
+  <script src="quizz.js"></script>
+</body>
+</html>

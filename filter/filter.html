@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter</title>
+  <link rel="stylesheet" href="filter.css">
+</head>
+<body>
+  <section class="container">
+    <div class="menu-container">
+      <input type="text" name="search" placeholder="Search..." id="search">
+      <div class="categories-container">
+        <p class="category" id="all">All</p>
+        <p class="category" id="jacket">Jackets</p>
+        <p class="category" id="full-set">Full Set</p>
+      </div>
+      <div>
+        <input type="range" name="range" id="range">
+        <span class="range-value"></span>
+      </div>
+    </div>
+    <div class="products-container">
+      <div class="products-grid">
+        <article class="product">
+          <img src="images/coffee-brown-set.jpg" alt="" class="product-image">
+          <p class="product-name">Fancy Jacket</p>
+          <p class="product-price">$44.4</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script src="products.js"></script>
+  <script src="filter.js"></script>
+</body>
+</html>
