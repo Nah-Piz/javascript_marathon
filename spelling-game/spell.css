@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+header {
+  padding: 10px;
+  top: 0;
+  background-color: #f0eded;
+  box-shadow: 0 0 30px 18px #33333355;
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  min-width: 300px;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header div h1, header div h3 {
+  text-align: center;
+  margin: 0;
+}
+section {
+  min-width: 60%;
+  min-height: 40%;
+  max-width: 80%;
+  max-height: 62%;
+  padding: 20px;
+  position: relative;
+  background-color: #f7f5f5;
+  box-shadow: 0 0 30px 18px #33333355;
+}
+.control-btns {
+  position: absolute;
+  bottom: -70px;
+  left: 10%;
+  right: 10%;
+}
+.control-btns .start .gen-btn {
+  background-color: transparent;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+.control-btns .start .gen-btn-anime {
+  display: none;
+  animation: gen-btn-loading 1s linear infinite;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-top: 3px solid red;
+}
+@keyframes gen-btn-loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.control-btns .start {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.control-btns .start:hover, .sign-up-form #sign-up:hover, .sign-up-form #guest-player:hover {
+  background-color: #204180;
+}
+h1 {
+  text-align: center;
+}
+p {
+  margin: 0;
+}
+
+#landing-page {
+ display: block;
+}
+
+/*Login section*/
+#sign-up-page {
+  display: none;
+}
+#login-page {
+  display: none;
+}
+#login-page h1 {
+  margin-top: 0;
+}
+.input-form, .sign-up-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.login-failed {
+  color: orange;
+  padding: 5px 0;
+  display: none;
+}
+.or-ctn {
+  display: flex;
+  align-items: center;
+}
+.or-ctn span:not(.or) {
+  height: 1px;
+  flex: 1;
+  background-color: #33333355;
+}
+.or {
+  padding: 0 10px;
+}
+.input-field {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 10px;
+}
+.sign-up-form .sign-up-span1 {
+  display: block;
+}
+.sign-up-form .sign-up-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-up-form #sign-up {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+}
+.sign-up-form #guest-player {
+  transition: all 0.5s ease;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #7f0eea;
+}
+
+
+/***Player*/
+#player-page {
+  display: none;
+}
+#player-page .welcome, #player-page h3 {
+  text-align: center;
+}
+.welcome {
+  color: #4bac22;
+  font-size: 19px;
+}
+#player-page h3, #player-page h1 {
+  margin: 10px;
+}
+.profile-detail {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+.detail-name {
+  width: 100px;
+}
+.detail {
+  flex: 1;
+}
+.lize {
+  padding-top: 10px;
+}
+
+
+/*Spell game page*/
+.spelling-result {
+  text-align: center;
+}
+.player-result-container {
+  display: none;
+  border-top: 1px solid #33333355;
+}
+.player-result-container p {
+  margin-top: 5px;
+}
+audio {
+  height: 45px;
+}
+.player-input-container {
+  padding-bottom: 10px;
+}
+#spell-page h1 {
+  margin-top: 0;
+}
+.result-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result-output-text {
+  width: 160px;
+}
+.result-output span:not(.result-output-text) {
+  flex: 1;
+}
+.unfilled {
+  display: none;
+}
+#spell-page {
+  display: none;
+}

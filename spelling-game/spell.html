@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YaYi Spelling Game</title>
+  <link rel="stylesheet" href="spell.css">
+</head>
+<body>
+  <script>
+    function check(p) {
+      console.log(p)
+    }
+  </script>
+  <header>
+    <div class="header-content">
+      <h1>YaYi Spelling Game</h1>
+      <h3>Landing Page.</h3>
+    </div>
+  </header>
+  <section class="root">
+
+    <div class="page" id="landing-page">
+      <h1>YaYi! Hello world</h1>
+      <p>
+        Welcome to the Yayi spelling bee game. Get ready<br>
+        to have fun as you spell correct all the words and <br>
+        move to the next level.
+      </p>
+      <h2 style="margin-bottom: 0;">How to play.</h2>
+      <p>
+        Its pretty easy and fun to play the spelling game.<br>
+        The follwing steps will guide you on how to get started<br />
+        the spell quizz game.
+      </p>
+      <ul class="game-instructions">
+        <li>Set up player account - this will truck your progress.</li>
+        <li>Or play as a guest player - no truck of your progress.</li>
+        <li>Choose a class - difficulty level depends on your class.</li>
+        <li>Play the audio to hear the words to be spelt.</li>
+        <li>Spell most words correct to get promoted to next class.</li>
+      </ul>
+    </div>
+
+    <div class="page" id="login-page">
+      <h1>Login to YaYi</h1>
+      <div class="input-form">
+        <div class="input-field">
+          <label for="player-name">Player Name: </label>
+          <input class="login-inputs" type="text" id="player-name-input" name="player-name" placeholder="Enter your player name...">
+        </div>
+        <div class="input-field">
+          <label for="player-password">Password: </label>
+          <input class="login-inputs" type="password" id="player-password-input" name="player-password" placeholder="Enter your password...">
+        </div>
+        <div class="radio">
+          <input type="checkbox" name="remember-me" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+        <div class="login-failed">Login failed! Enter valid password or player name</div>
+      </div>
+      <div class="or-ctn">
+        <span></span>
+        <span class="or">Or</span>
+        <span></span>
+      </div>
+      <div class="sign-up-form">
+        <span class="sign-up-span1">Dont yet have an account</span>
+        <div class="sign-up-btns">
+          <button id="sign-up">Sign up</button>
+          <span class="sign-up-span2">Or</span>
+          <button id="guest-player">Play as guest</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="page" id="sign-up-page">
+      <h1>Create Your Player Accounter</h1>
+      <div class="input-form">
+        <div class="input-field">
+          <label for="player-first-name">First Name: </label>
+          <input class="sign-up-input" type="text" id="player-first-name" name="player-first-name" placeholder="Enter your first name...">
+        </div>
+        <div class="input-field">
+          <label for="player-second-name">Seconda Name: </label>
+          <input class="sign-up-input" type="text" id="player-second-name" name="player-second-name" placeholder="Enter your second name...">
+        </div>
+        <div class="input-field">
+          <label for="player-name">Player name: </label>
+          <input class="sign-up-input" type="text" id="player-name" name="player-name" placeholder="Enter your player name...">
+        </div>
+        <div class="input-field">
+          <label for="player-password">Create password: </label>
+          <input class="sign-up-input" type="password" id="player-password" name="player-password" placeholder="Enter your password...">
+        </div>
+        <div class="input-field">
+          <label for="player-class">Choose your class: </label>
+          <select name="player-class" id="player-class">
+            <option value="1">P.1</option>
+            <option value="2">P.2</option>
+            <option value="3">P.3</option>
+            <option value="4">P.4</option>
+            <option value="5">P.5</option>
+            <option value="6">P.6</option>
+            <option value="7">P.7</option>
+          </select>
+        </div>
+      </div>
+      <p class="all-not-filled login-failed">Please fill all the input fields</p>
+    </div>
+
+    <div class="page"  id="player-page"></div>
+
+    <div class="page" id="spell-page">
+      <h1><span class="class">P.7</span>, Word No. <span class="word-number">1</span></h1>
+      <p>Play the audio to get the word and type the <br /> spelling of the word without spacing.</p>
+      <audio src="audios/P7/Voice 066.m4a" controls>Play audio to hear the word</audio>
+      <div class="spell-input-container">
+        <div class="player-input-container">
+          <label for="spelt-input">Spell the word:</label>
+          <input type="text" name="spelt-input" class="zigizaga">
+        </div>
+        <p class="unfilled">Not YaYi!!! Cannot Submit Unfilled Answer.</p>
+        <div class="player-result-container">
+          <p class="spelling-result"></p>
+          <p class="result-output"><span class="result-output-text">Your spelling was: </span> <span class="player-spelling">asycronous</span></p>
+          <p class="result-output"><span class="result-output-text">The correct spelling is: </span> <span class="correct-spelling">Asynchronous</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-btns">
+      <span id="gen-btn-ctn" class="start">
+        <span class="gen-btn-anime gen-btn-anime"></span>
+        <button class="gen-btn">Get Started</button>
+      </span>
+    </div>
+  </section>
+  
+  <script src="words.js"></script>
+  <script src="game.js"></script>
+  <script src="player.js"></script>
+  <script src="login.js"></script>
+  <script src="spell.js"></script>
+</body>
+</html>
