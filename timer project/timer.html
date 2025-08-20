@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<title>Timer</title>
+		<style>
+			body {
+				color: #fff;
+				background: #003;
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				gap: 50px;
+				justify-content: center;
+				align-items: center;
+			}
+			.container {
+				border: 1px solid #fff;
+				display: flex;
+				flex-direction: column;
+				gap: 50px;
+				justify-content: center;
+				align-items: center;
+				padding: 10%
+			}
+			input {
+				width: 50px;
+			}
+			.timer span {
+				font-size: 60px;
+			}
+			.control-containers {
+				display: flex;
+				flex-direction: column;
+				gap: 50px;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>The Timer APP</h1>
+			<div class="timer">
+				<span class="hour">00</span>
+				<span>:</span>
+				<span class="min">00</span>
+				<span>:</span>
+				<span class="sec">00</span>
+			</div>
+			<div class="control-containers">
+				<div class="control-container">
+					<input type="number" onchange="getValues(event)" id="hour" placeholder="00" />
+					<span>:</span>
+					<input type="number" onchange="getValues(event)" id="min" placeholder="00" />
+					<span>:</span>
+					<input type="number" onchange="getValues(event)" id="sec" placeholder="00" />
+				</div>
+				<div>
+					<button id="start" onclick="startTimer(event)">START</button>
+					<button id="pause" onclick="startTimer(event)">PAUSE</button>
+				</div>
+			</div>
+		</div>
+	<script>
+		let h =0;
+		let m = 0;
+		let s = 0;
+		function getValues(event) {
+			if (event.target.value<60) {
+				if (event.target.id === 'hour') {
+					h = Number(event.target.value);
+					if (event.target.value<10) {
+						document.querySelector('.hour').innerText = "0"+event.target.value;
+					} else {
+						document.querySelector('.hour').innerText = event.target.value;
+					}
+				} else if (event.target.id === 'min') {
+					m = Number(event.target.value);
+					if (event.target.value<10) {
+						document.querySelector('.min').innerText = "0"+event.target.value;
+					} else {
+						document.querySelector('.min').innerText = event.target.value;
+					}
+				} else if (event.target.id === 'sec') {
+					s = Number(event.target.value);
+					if (event.target.value<10) {
+					document.querySelector('.sec').innerText = "0"+event.target.value;
+					} else {
+						document.querySelector('.sec').innerText = event.target.value;
+					}
+				}
+			}
+			event.target.value = '';
+		}
+
+		function startTimer(event) {
+			console.log(event.target.id)
+			let hr = h;
+			let mn = m;
+			let sc = s;
+			let c = 0;
+			if (h>0) {
+				let a = h * 60
+				m = m + a
+			}
+			if (m>0) {
+				let u = m * 60
+				s = Number(s) + m * 60
+			}
+			if (s>0) {
+				c = s
+			}
+			console.log(c)
+			const interval = setInterval(()=>{
+				if (event.target.id === 'start') {
+					if (c>0){
+						if (c%3600 === 0 && c !== 0) {
+							hr--
+							mn = 60
+						}
+						if (c%60 === 0 && c !== 0) {
+							if (mn>0) {
+								mn--
+							}
+							sc = 60
+						}
+						if (sc>0) {
+							sc--
+						}
+						c--
+						if (hr<10){
+							document.querySelector('.hour').innerText = "0"+hr
+						} else {
+							document.querySelector('.hour').innerText = hr
+						}
+						if (mn<10){
+							document.querySelector('.min').innerText = "0"+mn
+						} else {
+							document.querySelector('.min').innerText = mn
+						}
+						if (sc<10){
+							document.querySelector('.sec').innerText = "0"+sc
+						} else {
+							document.querySelector('.sec').innerText = sc
+						}
+						console.log(hr+':'+mn+':'+sc+'-'+c)
+					} else {
+							clearInterval(interval)
+					}
+				}
+			},1000)
+			if (event.target.id === 'pause') {
+					clearInterval(interval);
+					c = 0
+					event.target.innerText = "RESUME"
+				}
+		}
+	</script>		
+	</body>
+</html>

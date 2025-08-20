@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main style="display: flex;">
+    <div style="flex: 1;" class="input-section">
+      <div style="width: 80%;margin: 30px auto;" class="control">
+        <label for="hours">Hours: </label>
+        <input type="number" min="0" value="0" id="hours" max="23">
+      </div>
+      <div style="width: 80%;margin: 30px auto;" class="control">
+        <label for="min">Minutes: </label>
+        <input type="number" min="0" value="0" id="min" max="59">
+      </div>
+      <div style="width: 80%;margin: 30px auto;" class="control">
+        <label for="sec">Seconds: </label>
+        <input type="number" min="0" value="0" id="sec" max="59">
+      </div>
+      <div style="width: 80%;margin: 30px auto;" class="control">
+        <button id="button1">Start</button>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;" class="display-section">
+      <div style="width: 80%;margin: 30px auto;" class="output">
+        <span id="hours">00</span> : <span id="min">00</span> : <span id="sec">00</span>
+      </div>
+      <div class="display-controls">
+        <button style="display: none;" id="button2">Pause</button>
+        <button style="display: none;" id="button3">Stop</button></div>
+    </div>
+  </main>
+  
+  <script src="t.js"></script>
+</body>
+</html>
